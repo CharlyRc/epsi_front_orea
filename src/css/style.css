@@ -1,0 +1,1091 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to right top, #d1d1d1, #d9d9d9, #e2e2e2, #eaeaea, #f3f3f3, #f3f3f3, #f3f3f3, #f3f3f3, #eaeaea, #e2e2e2, #d9d9d9, #d1d1d1);
+    list-style:none;
+    margin:0;
+}
+body a , a:visited{
+    text-decoration:none;
+    color:#fff;
+}
+.container{
+    margin:1em;
+}
+h1,h2,h3,h4{
+    margin:0;
+}
+h2{
+    text-align:center;
+    font-size:1.8em;
+}
+/****************************header***************************************/
+header {
+    /*background-image: url("../images/dessert-fraise.jpg");*/
+    background-color:#001e62;
+    background-size: cover;
+    background-position: center;
+    padding:1em;
+}
+.logo{
+    display:flex;
+    justify-content:space-around;
+    margin-bottom:3em;
+}
+.logo img{
+    width:20%;
+    cursor:pointer;
+}
+.navbar {
+    width: 100%;
+    z-index: 999; 
+}
+.navbar .nav-links ul {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    list-style: none; 
+    margin:0; 
+    padding: 0; 
+}
+.navbar .nav-links ul li {
+    font-size: 1.2em; 
+    font-family: 'Coneria Script Demo', cursive;
+}
+/*.logged-in {*/
+/*    margin-left:0.5em;*/
+/*    color:#fff;*/
+/*    text-shadow: #00ff0c 1px 0 10px;*/
+/*}*/
+/*.logged-out {*/
+/*    margin-left:0.5em;*/
+/*    color:#fff;*/
+/*    text-shadow: #ff0000 1px 0 10px;*/
+/*}*/
+#log{
+    margin : 0.7em 0 0 1em;
+}
+.navbar .nav-links ul li a{
+    color:#fff;
+    text-shadow: #001e62 1px 0 10px;
+}
+.navbar .nav-links ul li .active-link{
+    background-color:#fff;
+    padding:10px 20px 5px;
+    color:#001e62;
+    border-radius:1.2em;
+    transition:1s;
+}
+.navbar .nav-links ul li a:hover{
+    background-color:#fff;
+    padding:10px 20px 5px;
+    color:#001e62;
+    border-radius:1.2em;
+    text-shadow: #fff 1px 0 10px;
+    transition:1s;
+}
+.menu-burger {
+    display: none;
+    width: 30px;
+    position: absolute; 
+    right: 40px; 
+    top: 30px; 
+    cursor: pointer;
+}   
+.link-admin a{
+    display:flex; 
+    margin-top:0.5em;
+    margin-left:0.4em;
+    font-size:1em;
+    padding:0.2em;
+    position:absolute;
+    border-radius:0.5em;
+}
+/******************************Accueuil carousel***************************/
+.presentation{
+    text-align:center;
+}
+.presentation a{
+    color:#000000;
+    font-weight:bold;
+    text-decoration:underline;
+}
+.lien{
+    margin-top:2em;
+}
+.presentation div {
+    margin-top:3em;
+}
+.swiper{
+    background-color:transparent;
+}
+.swiper-wrapper{
+    display:flex;
+    align-items:center;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  margin:1.5em 0;
+}
+.swiper-slide img {
+  display: block;
+  box-shadow: 8px 0px 8px -2px black,
+  -8px 0px 8px -2px black;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.swiper-button-next:after,.swiper-button-prev:after{
+    color:#001e62;
+}
+.swiper-container {
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  bottom: -16vw;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+  padding-bottom: 3vw;
+}
+/******************************boutique******************************************/
+.title-product{
+    color:#212121;
+    margin:1em 0.5em;
+}
+.container_products{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-bottom:2em;
+    margin-top : 2em;
+}
+.container_products h3{
+    text-align:center;
+}
+.container_products h4{
+    font-size:0.9em;
+    margin-top:1em;
+}
+.product{
+    width:28%;
+    height:auto;
+    margin:0.5em;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+.product:hover{
+    z-index:100;
+    cursor:grab;
+    transform: scale(1.2);
+    transition:1s;
+}
+.product-info{
+    position:absolute;
+    background-color:#000000;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:1.2em;
+}
+.product-info p{
+    margin:0.4em 0.6em;
+    font-size:0.7em;
+    text-align:center;
+}
+/*.product-info p:last-child{*/
+/*    font-weight:bold;*/
+/*    font-size:1em;*/
+/*}*/
+.product-info:hover{
+    opacity:0.7;
+    transition:1s;
+}
+.product-info:after{
+    content:"";
+    position:absolute;
+    top: 0;
+    bottom:0;
+    right:0;
+    left:0;
+    border: 6px solid #dedede;
+}
+.product-info{
+    color:#fff;
+}
+.product-img{
+    width:100%;
+    height:100%;
+}
+.product-img img{
+    width:100%;
+    height:100%;
+}
+/******************nos services entreprises****************************/
+.services a,.services a:visited{
+    color:#000000;
+    font-weight:bold;
+    text-decoration:underline;
+}
+.services img{
+    width:25%;
+}
+.services p{
+    text-align:center;
+    font-size:1.2em;
+}
+.service-pro div, .service-particulier div{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-wrap:wrap;
+}
+.service-particulier div{
+    flex-direction:row-reverse;
+}
+.service-pro div div, .service-particulier div div{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:47%;
+}
+/******************origine des matières premières**********************/
+.origin-matter{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+.origin-matter img{
+    width:100%;
+}
+
+.origin-matter div{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    margin:1.5em auto;
+    padding:0.5em 1em;
+    background-color:#fff;
+    border-radius:1em;
+    width:45vw;
+}
+.origin-matter div div{
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin:1em 0.5em;
+}
+/*****************************qui suis-je*********************************/
+.qui{
+    margin-bottom:3em;
+}
+.qui div {
+    margin-top:4em;
+}
+.qui p::first-letter {
+  font-size: 1.2em;
+  margin-left: 1em;
+}
+
+/*****************************qui suis-je*********************************/
+/*****************************actualités*********************************/
+.actualites-inline{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.actualite{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    text-align:center;
+    margin:1em 0.5em;
+    padding:1em;
+}
+.actualites-inline div{
+    max-width:70vw;
+}
+.actualite img{
+    box-shadow: 10px 5px 5px #212121;
+    width:70%;
+}
+/*****************************contact-nous trouver***********************/
+.contact-page{
+    background-color:#fff;
+    width:85vw;
+    padding:1em;
+    border-radius:1em;
+    margin:0 auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:flex-start;
+    text-align:center;
+    color:#000000;
+    font-size:1.1em;
+}
+.contact-page i{
+    padding:0.5em;
+}
+.contact-page i:hover{
+    transform: rotateY(360deg);
+    transition:1s;
+}
+.contact-page h3{
+    margin-bottom:2em;
+    font-style:normal;
+    color:#171717;
+    font-size:1.2em;
+    border-radius:1em;
+    padding:0.5em;
+}
+.location-market{
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:1em;
+    margin:0 auto;
+}
+.location-market ul{
+    color:#000000;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.location-market li {
+    padding-bottom:0.5em;
+    color:#000000;
+    text-align:center;
+    font-size:1em;
+}
+.contact-page address a, .contact-page address p{
+    color:#000000;
+    font-style:normal;
+}
+.days{
+    font-style:normal;
+    font-weight:bold;
+}
+.contact-page .fa-facebook-f,.contact-page .fa-instagram{
+    margin-top:0;
+    padding-top:0;
+}
+.contact-page .fa-tiktok,.contact-page .fa-linkedin-in{
+    color:#000000;
+}
+#contact{
+    width:70vw;
+    margin:0 auto;
+    border-radius:1em;
+    margin-bottom:1em;
+    background-image:inherit;
+    box-shadow:none;
+}
+#contact .login-form{
+    background-size: 140%;
+    width:95%;
+    background-position:center;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    border-radius:1em;
+    font-size:0.8em;
+    background-color:#fff;
+}
+#contact .form-item{
+    width:45%;
+}
+#contact input,#contact textarea{
+    border:solid 1px #000000;
+}
+#contact textarea::placeholder, #contact input::placeholder,#contact form label,#contact form textarea, #contact form input{
+    color:#000000;
+}
+#contact .submit{
+    border:solid 2px #000000;
+    background-color:#fff;
+    color:#000000;
+}
+#contact .submit:hover{
+    background-color:#000000;
+    color:#fff;
+}
+/******************************FOOTER*************************************/
+footer{
+    padding:0.5em;
+    background-color:#001e62;
+    background-size: cover;
+    background-position:center;
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    color:#fff;
+    text-shadow: #001e62 1px 0 10px;
+}
+.foot{
+	  background-color: rgba(255, 255, 255, 0.2);
+	  border-radius:1em;
+	  padding:1em;
+	  font-size:0.7em;
+	  margin:0.2em;
+	  text-align:center;
+}
+.mentions-legales{
+    margin-top:1em;
+}
+.foot h3{
+    font-family: 'Coneria Script Demo', cursive;
+    color:#fff;
+    font-size:1.5em;
+    font-weight:bold;
+    text-align:center;
+}
+.first-word{
+    color:#fff;
+    font-style:normal;
+    font-weight:bold;
+}
+.networks{
+    display:flex;
+    align-items:center;
+    margin-top:0.5em;
+}
+.networks a{
+    margin:0.4em;
+}
+.foot a,.foot p{
+    font-style:normal;
+}
+.fa-brands{
+    font-size:2em;color:#fff;
+}
+.fa-facebook-f{
+    margin-top:0.5em;
+    color:#0c20ff;
+}
+.fa-instagram{
+    margin-top:0.5em;
+    color:#ff008c;
+}
+/**************************les formulaires********************************/
+input::placeholder {
+    font-style: italic;
+    color: #fff;
+}
+i{
+    margin-right:0.5em;
+}
+.fa-user, .close-button, button{
+    cursor:pointer;
+}
+.login {
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 40%;
+  margin: 0.5em auto;
+  box-shadow: 0 0 0.7em rgb(255, 255, 255);
+  border-radius: 2em;
+}
+.close-button{
+    color:#fff;
+    font-size:1.3em;
+    font-weight:bold;
+    margin:0.5em;
+}
+.login h2 {
+  font-size: 2em;
+  color:#fff;
+  padding:1em;
+}
+.login-form {
+  padding: 0.5em;
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+.form-item {
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  width: 90%;
+  margin: 0.5em auto;
+  align-items: center;
+}
+.form-item label{
+    color:#fff;
+    font-size:1.2em;
+    font-weight:bold;
+    margin-bottom:0.5em;
+}
+.login input {
+  border-radius: 1.5em;
+  border: 1px solid #fff;
+  background: transparent;
+  width: 80%;
+  height: 2em;
+  outline: none;
+  margin: auto;
+  color: #fff;
+  font-size: 1em;
+  text-align:center;
+  cursor:pointer;
+}
+.submit{
+  width:60%;
+  font-size: 1.2em;
+  margin: 0.5em auto;
+  padding: 0.4em;
+  border-radius:0.5em;
+  color: #fff;
+  font-weight:bold;
+  background-color:#000000;
+}
+.submit:hover{
+    color:#000000;
+    background-color:#fff;
+    transition:1s;
+}
+.submit-login{
+    background-color:#001E62;
+    color:#fff;
+    border:solid 2px #fff;
+}
+.submit-login:hover{
+    background-color:#fff;
+    color:#001E62;
+}
+.create-count{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+}
+.create-count a{
+    margin-left:1em;
+    color:#00e5ff;
+    text-decoration: underline;
+}
+.form-item{
+  display: flex;
+  flex-direction:column;
+  position: relative;
+  overflow: hidden;
+}
+.input-file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.input-file + label {
+    color: white;
+    cursor:pointer;
+    padding:0.5em;
+}
+.input-file:focus + label,
+.input-file + label {
+    color:#fff;
+    background-color:transparent;
+    border:solid 2px #fff;
+    border-radius:1em;
+}
+.input-file:focus + label,
+.input-file + label:hover {
+    color:#000000;
+    background-color:#fff;
+    transition:1s;
+}
+.contact{
+     background-image: linear-gradient(to right top, #000000, #050505, #0b0b0b, #0f0f0f, #131313, #131313, #131313, #131313, #0f0f0f, #0b0b0b, #050505, #000000);
+    display:block;
+    width:100%;
+    margin:0;
+    border-radius:0;
+}
+.contact h2{
+   text-shadow:5px 1px 10px #606060;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+ 
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+ 
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button { 
+	-o-appearance: none;
+	margin:0
+}
+.fa-location-dot{
+    color:#fff;
+    margin-left:0.7em;
+}
+.contact textarea::placeholder{
+    color:#fff;
+    font-size:1.3em;
+    font-weight:bold;
+}
+.contact textarea{
+  background: transparent;
+  width: 80%;
+  height: 70px;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius:1em;
+  margin: auto;
+  color: #fff;
+  font-size: 1em;
+  padding:0.5em;
+}
+/*******************************admin area****************************************/
+.admin-area h2{
+    background-color:#000000;
+    color:#fff;
+    display:inline-block;
+    border-radius:0.5em;
+    padding:0.2em 0.5em;
+}
+.admin-area{
+    background-image: linear-gradient(to right top, #000000, #050505, #0b0b0b, #0f0f0f, #131313, #131313, #131313, #131313, #0f0f0f, #0b0b0b, #050505, #000000);
+    padding:1em;
+    margin:auto;
+    text-align:center;
+}
+.admin-area ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:0 0.5em 0;
+}
+.admin-area ul li{
+    margin:0.5em 0;
+}
+.admin-area ul a{
+    color:#d3d3d3;
+    font-weight:bold;
+    font-style:italic;
+}
+.admin-area ul a:hover{
+    color:#ffad42;
+    text-shadow: #fff 1px 0 1px;
+}
+.admin-area li{
+    margin-top:1em;
+    font-size:1.2em;
+}
+/********************************Products admin/actualites*************************************/
+.admin-global-product{
+    padding:0.5em;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    background-image: linear-gradient(to right top, #000000, #050505, #0b0b0b, #0f0f0f, #131313, #131313, #131313, #131313, #0f0f0f, #0b0b0b, #050505, #000000);
+}
+.admin-product{
+    display:flex;
+    flex-wrap:wrap;
+    width:30%;
+    justify-content:center;
+    padding:0.5em;
+    border:solid 2px #939393;
+}
+.admin-manage{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.admin-manage img{
+    width:150px;
+    height:150px;
+    margin-right:0.8em;
+    margin-bottom:0.8em;
+}
+.update-product{
+    display:flex;
+    align-items:flex-end;
+}
+.update-product p, .update-product a{
+    font-weight:200;
+    text-align:center;
+    color:#ffffff;
+    margin:0;
+    padding:0.5em;
+    border:solid 0.5px #686868;
+    cursor:pointer;
+}
+.update-product p:hover, .update-product a:hover{
+    color:#000000;
+    background-color:#686868;
+    transition:1s;
+}
+.admin-product-info{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+}
+.admin-product-info p{
+    text-align:center;
+    color:#fff;
+}
+/*****************************list contact admin********************************/
+.global-contact{
+    display:flex;
+    position:relative;
+    justify-content:center;
+    flex-wrap:wrap;
+    background-image: linear-gradient(to right top, #000000, #050505, #0b0b0b, #0f0f0f, #131313, #131313, #131313, #131313, #0f0f0f, #0b0b0b, #050505, #000000);
+}
+.contact-list p span{
+    color:#a3a3a3;
+    font-weight:bold;
+    font-style:italic;
+    text-decoration:underline;
+}
+.contact-list{
+    border:solid 2px #939393;
+    color:#fff;
+    width:47%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    border-radius:0.5em;
+    padding:0.8em;
+}
+.contact-name{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    width:100%;
+}
+.contact-address{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    width:100%;
+}
+.contact-address p:first-child, .contact-address p:nth-child(2){
+    margin-right:0.5em;
+}
+.contact-tel{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    width:100%;
+}
+.contact-message{
+    display:flex;
+    width:100%;
+    justify-content:center;
+    text-align:center;
+}
+/*****************list admin**********************************/
+.global-list-admin{
+    background-image: linear-gradient(to right top, #000000, #050505, #0b0b0b, #0f0f0f, #131313, #131313, #131313, #131313, #0f0f0f, #0b0b0b, #050505, #000000);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:0.5em;
+    text-align:center;
+}
+.admin-list p{
+    margin:0;
+}
+.admin-list{
+    border:solid 1px #939393;
+    padding:0.5em;
+}
+.admin-list .update-product{
+    margin-top:0.4em;
+}
+.admin-name{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    margin:0.4em;
+}
+/****************confirm delete modal*************************/
+.confirm-delete{
+    background-image: linear-gradient(to right top, #000000, #050505, #0b0b0b, #0f0f0f, #131313, #131313, #131313, #131313, #0f0f0f, #0b0b0b, #050505, #000000);
+    color:#fff;
+    position: fixed;
+    font-size:1.2em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius:0.5em;
+    padding:0.5em;
+    border:solid 1px #fff;
+    box-shadow:10px 5px 5px #686868;
+    z-index:99;
+    
+}
+.confirm-delete .update-product{
+    display:flex;
+    justify-content:space-around;
+}
+
+/******************************Message alerte/confirmation suppression********************************/
+.msgAlert{
+    display:flex;
+    justify-content:center;
+}
+.msgAlert h3{
+    background-color:transparent;
+    color:#fff;
+    text-shadow:#ff2626 1px 0 8px;
+}
+@media screen and (max-width:950px){
+/*****************header navbar menu burger *********************/    
+.navbar {
+    padding: 0;
+    
+}
+.menu-burger {
+display: block;
+z-index:99;
+}
+.nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%; 
+    transition: all 0.5s ease;
+    background-color:#001e62;
+    z-index:99;
+}
+.mobile-menu {
+    margin-left: 0;
+    z-index:99;
+}
+.nav-links ul {
+    flex-direction: column; 
+    align-items: center; 
+}
+.nav-links ul li {
+    margin: 25px 0; 
+    font-size: 1.2em;
+}
+.navbar .nav-links ul li a{
+    color:#fff;
+    text-shadow: #001e62 1px 0 10px;
+}
+.logo{
+    margin:0;
+}
+.logo img{
+    width:40%;
+}
+.market {
+    display:none;
+}
+/*************************login*************************/
+.login{
+    width:90%;
+}
+.contact{
+    width:100%;
+}
+/******************admin products/actualite*************/
+.admin-product{
+    width:45%;
+}
+.swiper-slide img{
+    width:90%;
+    margin:auto;
+}
+/*******************boutique****************************/
+.container_products h4{
+    color:#000000;
+}
+.container_products{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    flex-wrap:wrap;
+    margin:0 auto;
+}
+.product{
+    width:95%;
+    flex-direction:row;
+    flex-wrap:wrap;
+    position:static;
+    align-items:stretch;
+    margin-bottom:0.5em;
+}
+.product:hover{
+    z-index:0;
+    cursor:initial;
+    transform:scale(1);
+}
+.product-info{
+    position:static;
+    background-color:transparent;
+    opacity:1;
+    width:45%;
+    padding:0.5em;
+    border:solid 2px #808080;
+    border-radius:1em;
+}.product-info h3{
+    color:#212121;
+}
+.product-info p{
+    color:#404040;
+}
+.product-info:hover{
+    opacity:1;
+}
+.product-info:after{
+    position:static;
+    display:none;
+}
+.product-info{
+    color:#fff;
+}
+.product-img{
+    width:45%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+}
+/**********************services***********************************/
+.service-pro div, .service-particulier div,.service-pro div div, .service-particulier div div{
+    display:block;
+    width:100%;
+}
+.service-pro img{
+    float:left;
+    width:60vw;
+    margin-right:1.2em;
+}
+.services p{
+    font-size:1.2em;
+}
+.service-pro, .service-particulier{
+    text-align:justify;
+}
+.service-particulier img{
+    float:right;
+    margin-left:1.2em;
+    width:40vw;
+}
+.clear{
+    clear:both;
+}
+/**********************origine des matières premières**********************/
+.origin-matter{
+    flex-direction:column;
+}
+.origin-matter div{
+    width:90%;
+}
+/*************************formulaire contact*******************/
+.contact-page{
+    width:70%;
+    flex-direction:column;
+    align-items:center;
+}
+.contact-page h3{
+    margin-bottom:1em;
+}
+.foot{
+	  background-color: transparent;
+	  
+}
+}
+@media screen and (max-width:620px){
+    
+   /******************admin products/actualite*********************/
+.contact-list{
+    width:100%;
+}
+.admin-product{
+    width:100%;
+}
+
+/************boutique*******************************/
+.product{
+    width:95%;
+    flex-direction:column;
+}
+.product-img,.product-info{
+    width:95%;
+    margin-bottom:0.5em;
+}
+.contact-us .form-item{
+    width:100%;
+}
+.location-market{
+    width:100%;
+}
+/****************servives********************************/
+.service-pro img, .service-particulier img{
+    float:none;
+    width:90vw;
+    margin:auto;
+}
+.service-pro, .service-particulier{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+/****************origines des matieres premieres**********/
+.origin-matter div{
+    flex-direction:column;
+    padding-bottom:0.5em;
+}
+.milk img{
+    width:80%;
+}
+.networks a{
+    margin :0.2em;
+}
+.networks-foot a{
+    margin:0.6em;
+}
+.networks-foot{
+    flex-direction:column;
+}
+.actualite img{
+    width:90%;
+}
+}
