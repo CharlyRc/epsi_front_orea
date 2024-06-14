@@ -41,11 +41,8 @@ const AddProduct = () => {
             messageFn("Veuillez sélectionner un fichier");
             return;
         }
-        // else if(isNaN(userData.price)){
-        //     messageFn("Veuillez mettre un chiffre au prix svp");
-        //     return;
-        // }
         
+        console.log('File selected:', files[0]);
         dataFile.append('files', files[0], files[0].name);// ajoute le premier fichier sélectionné à l'instance FormData
         dataFile.append('description', userData.description);// ajoute la description de l'article à l'instance FormData...
         dataFile.append('price', userData.price);

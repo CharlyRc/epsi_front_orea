@@ -1,7 +1,6 @@
 import axios from "axios";
 import {BASE_URL} from '../tools/constante.js';
 import {useState, useEffect} from "react";
-// permet d'extraire les paramètres d'une URL
 import {useParams} from "react-router-dom";
 import {Fragment} from "react";
 

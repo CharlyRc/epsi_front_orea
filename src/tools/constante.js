@@ -1,2 +1,2 @@
-export const BASE_URL = 'https://api.oreapatisserie.fr'
-export const BASE_IMG = 'https://api.oreapatisserie.fr/img'
+export const BASE_URL = 'http://localhost:3001'
+export const BASE_IMG = 'http://localhost:3001/img'
